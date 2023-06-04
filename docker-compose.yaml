@@ -1,0 +1,15 @@
+version: '3'
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    image: isilva100/golang
+    hostname: golangapp
+    container_name: golangapp
+    networks:
+      - go-network
+
+networks:
+  go-network:
+    driver: bridge
